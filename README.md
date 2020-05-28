@@ -1,6 +1,6 @@
-# laravel App Image
+# Laravel App Image
 
-Laravel Dockerfile to build image on Docker Hub
+Laravel Dockerfile to build image on Docker Hub. This PHP FPM image uses the latest PHP 7.4 and add several PHP extensions including Opcache. We may add new bells and whistles later down the line.
 
 ## Build
 
