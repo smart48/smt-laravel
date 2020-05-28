@@ -1,2 +1,2 @@
 # laravel-k8
-Laravel Docker Image
+Laravel Dockerfile to build image on Docker Hub
