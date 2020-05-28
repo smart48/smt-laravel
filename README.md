@@ -5,12 +5,12 @@ Laravel Dockerfile to build image on Docker Hub
 
 To build for my own temporary Docker Hub repository I use
 ```
-docker build . -t imwz/laravel-k8
+docker build . -t smart48/laravel-app
 ```
 
 
 and then to push
 
 ```
-docker image push imwz/laravel-k8
+docker image push smart48/laravel-app
 ```
