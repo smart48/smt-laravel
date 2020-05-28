@@ -4,7 +4,7 @@ Laravel Dockerfile to build image on Docker Hub. This PHP FPM image uses the lat
 
 ## Build
 
-To build for my own temporary Docker Hub repository I use
+To build for our own Smart48 Docker Hub repository I use
 ```
 docker build . -t smart48/laravel-app
 ```
@@ -16,3 +16,9 @@ And then to push you run:
 ```
 docker image push smart48/laravel-app
 ```
+
+## TODO
+
+Add `ADD . /var/www ...` to add latest version of code to image. One will then have to publish image in a private repo doing that from project root.
+
+We also may need to do a few `artisan` commands as well post adding code.
