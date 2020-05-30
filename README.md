@@ -19,7 +19,7 @@ docker image push smart48/laravel-app
 
 ## APP COPY
 
-Add `COPY . /var/www/` before `WORKDIR /var/www` to add latest version of code to image. One will then have to publish image in a private repo doing that from project root. 
+Add `COPY . /var/www/` after `WORKDIR /var/www` to add latest version of code to image. One will then have to publish image in a private repo doing that from project root. 
 
 _A valid use case for ADD is when you want to extract a local tar file into a specific directory in your Docker image. If you're copying in local files to your Docker image, always use COPY because it's more explicit._
 https://stackoverflow.com/a/51871487/460885
