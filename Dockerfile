@@ -12,13 +12,13 @@
 # Note: Base Image name format {image-tag}-{php-version}
 #
 
-ARG LARADOCK_PHP_VERSION
+ARG LARADOCK_PHP_VERSION=7.4
 ARG BASE_IMAGE_TAG_PREFIX=latest
 FROM laradock/php-fpm:${BASE_IMAGE_TAG_PREFIX}-${LARADOCK_PHP_VERSION}
 
 LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 
-ARG LARADOCK_PHP_VERSION
+ARG LARADOCK_PHP_VERSION=7.4
 
 # Set Environment Variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -129,7 +129,7 @@ RUN if [ ${INSTALL_FAKETIME} = true ]; then \
 # SOAP:
 ###########################################################################
 
-ARG INSTALL_SOAP=false
+ARG INSTALL_SOAP=true
 
 RUN if [ ${INSTALL_SOAP} = true ]; then \
     # Install the soap extension
@@ -400,7 +400,7 @@ RUN if [ ${INSTALL_GEARMAN} = true ]; then \
 # pcntl
 ###########################################################################
 
-ARG INSTALL_PCNTL=false
+ARG INSTALL_PCNTL=true
 RUN if [ ${INSTALL_PCNTL} = true ]; then \
     # Installs pcntl, helpful for running Horizon
     docker-php-ext-install pcntl \
@@ -548,7 +548,7 @@ RUN if [ ${INSTALL_IONCUBE} = true ]; then \
 # Opcache:
 ###########################################################################
 
-ARG INSTALL_OPCACHE=false
+ARG INSTALL_OPCACHE=true
 
 RUN if [ ${INSTALL_OPCACHE} = true ]; then \
     docker-php-ext-install opcache \
@@ -666,7 +666,7 @@ RUN if [ ${INSTALL_IMAGE_OPTIMIZERS} = true ]; then \
 
 USER root
 
-ARG INSTALL_IMAGEMAGICK=false
+ARG INSTALL_IMAGEMAGICK=true
 
 RUN if [ ${INSTALL_IMAGEMAGICK} = true ]; then \
     apt-get install -y libmagickwand-dev imagemagick && \
