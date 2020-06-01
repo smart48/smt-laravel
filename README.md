@@ -30,7 +30,7 @@ And then to push the built image you run:
 docker image push smart48/laravel-app
 ```
 
-**NB** We connected this repository to Docker Hub so on every change / `git push` Docker Hub does an automatic build.
+We connected this repository to Docker Hub so on every change / `git push` Docker Hub does an automatic build. The image is currently located at https://hub.docker.com/r/smart48/laravel-app . 
 
 ## Code Base Copy
 
