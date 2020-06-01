@@ -12,18 +12,19 @@ We cannot use `.env` during build:
 
 https://vsupalov.com/docker-arg-env-variable-guide/
 
-So we need replace them all by fixed values or use `ARG`. Laradock added `ARG`s already. We just needed to define a few to get the proper manifest for chosen PHP version.
+So we need to replace them all by fixed values or use `ARG`. Laradock added `ARG`s already. We just needed to define a few to get the proper manifest for chosen PHP version.
 
-## Build
+## Docker Build
 
-To build for our own Smart48 Docker Hub repository I use
+To build for our own Smart48 Docker Hub repository we use
 ```
 docker build . -t smart48/laravel-app
 ```
+This will build with the tag using our organization's name and name for the image.
 
-## Push
+## Docker Push
 
-And then to push you run:
+And then to push the built image you run:
 
 ```
 docker image push smart48/laravel-app
@@ -31,7 +32,7 @@ docker image push smart48/laravel-app
 
 **NB** We connected this repository to Docker Hub so on every change / `git push` Docker Hub does an automatic build.
 
-## APP COPY
+## Code Base Copy
 
 Add `COPY . /var/www/` after `WORKDIR /var/www` to add latest version of code to image. One will then have to publish image in a private repo doing that from project root. You can however decide not to do this and use other code deployment tools like PHP Deployer.
 
