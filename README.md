@@ -18,7 +18,7 @@ So we need to replace them all by fixed values or use `ARG`. Laradock added `ARG
 
 To build for our own Smart48 Docker Hub repository we use
 ```
-docker build . -t smart48/laravel-app
+docker build . -t smart48/smt-laravel
 ```
 This will build with the tag using our organization's name and name for the image.
 
@@ -27,7 +27,7 @@ This will build with the tag using our organization's name and name for the imag
 And then to push the built image you run:
 
 ```
-docker image push smart48/laravel-app
+docker image push smart48/smt-laravel
 ```
 
 We connected this repository to Docker Hub so on every change / `git push` Docker Hub does an automatic build. The image is currently located at https://hub.docker.com/r/smart48/laravel-app . 
