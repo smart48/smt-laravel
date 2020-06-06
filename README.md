@@ -10,7 +10,7 @@ docker build . -t smart48/smt-laravel
 ```
 This will build with the tag using our organization's name and name for the image.
 
-# Test
+## Test
 
 You can test the build image using:
 
