@@ -20,7 +20,7 @@ docker run --name smt-laravel -d smart48/smt-laravel:latest
 And then you can check it using
 
 ```
-docker exec -it smt-laravel ash 
+docker exec -it smt-laravel bash 
 ```
 
 ## Docker Push
