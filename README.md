@@ -10,6 +10,19 @@ docker build . -t smart48/smt-laravel
 ```
 This will build with the tag using our organization's name and name for the image.
 
+# Test
+
+You can test the build image using:
+
+```
+docker run --name smt-laravel -d smart48/smt-laravel:latest
+```
+And then you can check it using
+
+```
+docker exec -it smt-laravel ash 
+```
+
 ## Docker Push
 
 And then to push the built image you run:
