@@ -1,6 +1,6 @@
 FROM php:7.4-fpm
 
-WORKDIR /var/www
+WORKDIR /code
 
 RUN apt-get update && apt-get install -y libmcrypt-dev zip unzip git \
     libmagickwand-dev --no-install-recommends \
