@@ -1,6 +1,6 @@
 FROM php:7.4-fpm
 
-WORKDIR /app
+WORKDIR /code
 
 # https://learnk8s.io/blog/kubernetes-deploy-laravel-the-easy-way
 # COPY . app to copy all laravel app files to this working directory
