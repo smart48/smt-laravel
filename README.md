@@ -8,7 +8,7 @@ To build for our own Smart48 Docker Hub repository we use
 ```
 docker build . -t smart48/smt-laravel
 ```
-This will build with the tag using our organization's name and name for the image.
+This will build with the tag using our organization's name and name for the image. Make sure Docker is running or see something like `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
 
 ## Test
 
