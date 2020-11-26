@@ -23,6 +23,17 @@ And then you can check it using
 docker exec -it smt-laravel bash 
 ```
 
+To check PHP running for example
+
+```
+smt-laravel git:(master) docker exec -it smt-laravel bash
+root@780405b59479:/code# php --version
+PHP 7.4.12 (cli) (built: Nov 18 2020 09:41:41) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.12, Copyright (c), by Zend Technologies
+```
+
 ## Docker Push
 
 And then to push the built image you run:
