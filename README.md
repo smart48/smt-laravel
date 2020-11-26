@@ -41,6 +41,29 @@ And then to push the built image you run:
 ```
 docker image push smart48/smt-laravel
 ```
+and you will see something like
+
+```
+docker image push smart48/smt-laravel
+The push refers to repository [docker.io/smart48/smt-laravel]
+e76ec036953e: Pushed 
+34f94e6c4059: Pushed 
+4df1b456805c: Pushed 
+e045a4a21068: Pushed 
+42898d89ae59: Pushed
+127e2c9a33c1: Pushed 
+4ea3c65c023d: Layer already exists 
+dfc9a25aec65: Layer already exists 
+f88ec9b10e54: Layer already exists 
+600219b5f5b8: Layer already exists 
+d31ca1f001ca: Layer already exists 
+57fbdd49fe27: Layer already exists
+dfad4a4c6fc6: Layer already exists 
+7a17eb00e8b7: Layer already exists 
+3855c00ce1fc: Layer already exists 
+f5600c6330da: Layer already exists 
+latest: digest: sha256:39e5dbe398536e787255d4376d3202b7872c2a23e00377468fa6294c4495ec6b size: 3659
+```
 
 We connected this repository to Docker Hub so on every change / `git push` Docker Hub does an automatic build. The image is currently located at https://hub.docker.com/r/smart48/laravel-app . 
 
