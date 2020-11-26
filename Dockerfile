@@ -5,6 +5,7 @@ WORKDIR /code
 # https://learnk8s.io/blog/kubernetes-deploy-laravel-the-easy-way
 # COPY . app to copy all laravel app files to this working directory
 # Only use this option when this container is in a private repository
+# Composer is added to https://github.com/smart48/smt-workspace 
 
 RUN apt-get update && apt-get install -y libmcrypt-dev zip unzip git \
     libmagickwand-dev --no-install-recommends \
