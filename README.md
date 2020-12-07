@@ -34,6 +34,27 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
     with Zend OPcache v7.4.12, Copyright (c), by Zend Technologies
 ```
 
+## Docker Tag
+
+
+To tag the latest stabele build you can use `docker tag <repo/image> <repo/image:version>`:
+
+```
+docker tag smart48/smt-laravel smart48/smt-laravel:1.0
+```
+
+You will on listing then see the newly added version:
+
+```
+docker images                                         
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+smart48/smt-mysql              latest              9aae819f7c46        6 days ago          545MB
+smart48/smt-horizon            latest              cb443bc93f92        7 days ago          422MB
+smart48/smt-laravel            1.0                 4f6ffbe3b4ec        11 days ago         654MB
+smart48/smt-laravel            latest              4f6ffbe3b4ec        11 days ago         654MB
+...
+
+```
 ## Docker Push
 
 And then to push the built image you run:
@@ -69,6 +90,8 @@ We connected this repository to Docker Hub so on every change / `git push` Docke
 
 
 **NB** This you only use for the build used for production. For the local build with `docker-compose` you can just load from the container as the data is already threre on your local box.
+
+**MBB** Better to push the latest by tag, especially for production usage
 
 ## TODO
 
