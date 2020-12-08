@@ -62,6 +62,13 @@ And then to push the built image you run:
 ```
 docker image push smart48/smt-laravel
 ```
+
+Or if you did tag the image
+
+```
+docker image push smart48/smt-laravel:version
+```
+
 and you will see something like
 
 ```
