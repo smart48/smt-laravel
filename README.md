@@ -40,7 +40,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 To tag the latest stabele build you can use `docker tag <repo/image> <repo/image:version>`:
 
 ```
-docker tag smart48/smt-laravel smart48/smt-laravel:1.1
+docker tag smart48/smt-laravel smart48/smt-laravel:1.3
 ```
 
 You will on listing then see the newly added version:
@@ -60,7 +60,7 @@ smart48/smt-laravel            latest              4f6ffbe3b4ec        11 days a
 And then to push the built image you run:
 
 ```
-docker image push smart48/smt-laravel:1.1
+docker image push smart48/smt-laravel:1.3
 ```
 
 Or if you did tag the image
