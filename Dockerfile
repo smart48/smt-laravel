@@ -27,13 +27,12 @@ COPY ./laravel.ini /usr/local/etc/php/conf.d
 COPY ./opcache.ini /usr/local/etc/php/conf.d
 COPY ./xlaravel.pool.conf /usr/local/etc/php-fpm.d/
 
-# Part below for local container testing with code outside of Kubernetes
+# Add code to temporary location on image
 
-# COPY laravel /code
+COPY laravel /var/www
 
 # Install Composer
-# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# RUN composer install \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN cd /var/www && composer install
 # &&  php artisan optimize \
 # &&  php artisan route:cache
