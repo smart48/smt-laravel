@@ -30,8 +30,8 @@ COPY ./opcache.ini /usr/local/etc/php/conf.d
 COPY ./xlaravel.pool.conf /usr/local/etc/php-fpm.d/
 
 # Add code to temporary location on image
-COPY laravel /code
+COPY laravel /var/www
 
 # Install Composer Packages
-RUN cd /code && composer install \
-&& chown -R 1000:1000 /code
+RUN cd /var/www && composer install \
+&& chown -R 1000:1000 /var/www
