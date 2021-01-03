@@ -2,6 +2,36 @@
 
 Laravel Dockerfile is a custom PHP FPM Image. Is is still pretty barren , but we will add more elements as time goes by.
 
+## Major Packages
+
+We have added several packages wich we deem necessary for Laravel.
+
+
+### General Packages
+
+- bcmath
+- pcntl
+- mysqli
+- libmcrypt
+- libssl
+- curl
+
+### PHP Extensions
+
+- pdo_mysql
+- pdo_pgsql
+- opcache
+- mysqli
+- GD 
+- Imagick (may be removed in the future)
+
+
+Image Libraries:
+
+- libwebp
+- libpng
+- libjpeg
+
 ## Docker Build
 
 To build for our own Smart48 Docker Hub repository we use
@@ -40,7 +70,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 To tag the latest stabele build you can use `docker tag <repo/image> <repo/image:version>`:
 
 ```
-docker tag smart48/smt-laravel smart48/smt-laravel:2.0.5
+docker tag smart48/smt-laravel smart48/smt-laravel:2.1.0
 ```
 
 You will on listing then see the newly added version:
@@ -60,7 +90,7 @@ smart48/smt-laravel            latest              4f6ffbe3b4ec        11 days a
 And then to push the built image you run:
 
 ```
-docker image push smart48/smt-laravel:2.0.5
+docker image push smart48/smt-laravel:2.1.0
 ```
 
 Or if you did tag the image
